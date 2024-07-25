@@ -3,9 +3,6 @@ name: CSharp CI
 on: [push]
 
 jobs:
-    build_test:
-        name: build test    
-
 build:
     runs-on: macos-latest
 
