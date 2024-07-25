@@ -3,7 +3,7 @@ name: CSharp CI
 on: [push]
 
 jobs:
-build_test:
+    build_test:
     name: build test    
 
 build:
