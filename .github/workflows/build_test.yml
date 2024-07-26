@@ -15,12 +15,12 @@ jobs:
           run: dotnet test Timesheet.Test --filter FullyQualifiedName~Timesheet.Test.UNIT --logger trx --results-directory ./test-results
         - name: Run integration check
           run:
-            dotnet run --project Timesheet &
+            dotnet run --project Timesheet.Test &
             sleep 10 &&
             dotnet test Timesheet.Test --filter FullyQualifiedName~Timesheet.Test.API --logger trx --results-directory ./test-results
         - name: Run E2EH check
           run:
-            dotnet run --project Timesheet &
+            dotnet run --project Timesheet.Test &
             sleep 10 &&
             dotnet test Timesheet.Test --filter FullyQualifiedName~Timesheet.Test.E2EH --logger trx --results-directory ./test-results
         - name: Publish Test Results
