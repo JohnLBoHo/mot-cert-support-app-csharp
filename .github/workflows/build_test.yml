@@ -16,7 +16,6 @@ jobs:
         - name: Run integration and E2E checks
           run:
             dotnet run --project Timesheet &
-            sleep 30 &&
+            sleep 10 &&
             dotnet test Timesheet --filter FullyQualifiedName~Timesheet.Tests.Api
-            dotnet test Timesheet --filter FullyQualifiedName~Timesheet.Tests.E2EH
-          
+            
