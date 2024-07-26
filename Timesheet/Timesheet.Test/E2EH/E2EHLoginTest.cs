@@ -1,19 +1,21 @@
-﻿namespace Timesheet.Test.E2E;
+﻿namespace Timesheet.Test.E2EH;
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 
-public class E2ELoginTest
+public class E2EHLoginTest
 {
 
     [Test]
     public void TestLoginReturnsCorrectPage()
     {
         new DriverManager().SetUpDriver(new ChromeConfig());
+        ChromeOptions options = new ChromeOptions();
+        options.AddArguments("--headless");
 
-        IWebDriver _webDriver = new ChromeDriver();
+        IWebDriver _webDriver = new ChromeDriver(options);
 
         _webDriver.Navigate().GoToUrl("http://localhost:8080");
 
