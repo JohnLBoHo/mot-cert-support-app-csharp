@@ -24,7 +24,7 @@ jobs:
             sleep 10 &&
             dotnet test Timesheet --filter FullyQualifiedName~Timesheet.Tests.E2EH --logger trx --results-directory ./test-results
         - name: Publish Test Results
-          uses: EnricoMi/publish-unit-test-result-action/composite@v2
+          uses: EnricoMi/publish-unit-test-result-action/windows@v2
           if: always()
           with:
            files: |
