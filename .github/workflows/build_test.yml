@@ -13,10 +13,13 @@ jobs:
             dotnet-version: '8.0.x'
         - name: Run unit checks
           run: dotnet test Timesheet --filter FullyQualifiedName~Timesheet.Tests.Unit
-        - name: Run integration and E2E checks
+        - name: Run integration check
           run:
             dotnet run --project Timesheet &
             sleep 10 &&
             dotnet test Timesheet --filter FullyQualifiedName~Timesheet.Tests.Api
+        - name: Run E2E check
+          run:
+            dotnet run --project Timesheet &
             sleep 10 &&
             dotnet test Timesheet --filter FullyQualifiedName~Timesheet.Tests.E2EH
