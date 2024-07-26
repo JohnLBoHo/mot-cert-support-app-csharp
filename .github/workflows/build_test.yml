@@ -28,4 +28,4 @@ jobs:
           if: always()
           with:
            files: |
-             test-results/*.trx
+             test-results\**\*.trx
