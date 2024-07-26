@@ -18,4 +18,5 @@ jobs:
             dotnet run --project Timesheet &
             sleep 10 &&
             dotnet test Timesheet --filter FullyQualifiedName~Timesheet.Tests.Api
-            
+            sleep 10 &&
+            dotnet test Timesheet --filter FullyQualifiedName~Timesheet.Tests.E2EH
