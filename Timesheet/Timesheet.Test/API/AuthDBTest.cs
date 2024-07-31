@@ -1,4 +1,4 @@
-﻿namespace Timesheet.Test.Api;
+﻿namespace Timesheet.Test.API;
 
 using static RestAssured.Dsl;
 using System.Net;

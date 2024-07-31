@@ -1,4 +1,4 @@
-namespace Timesheet.Test;
+namespace Tests;
 
 public class Tests
 {

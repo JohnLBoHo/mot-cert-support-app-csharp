@@ -9,15 +9,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Tests\**" />
     <Compile Remove="Timesheet.Test\**" />
+    <Content Remove="Tests\**" />
     <Content Remove="Timesheet.Test\**" />
+    <EmbeddedResource Remove="Tests\**" />
     <EmbeddedResource Remove="Timesheet.Test\**" />
+    <None Remove="Tests\**" />
     <None Remove="Timesheet.Test\**" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.4" />
+    <PackageReference Include="MSTest.TestAdapter" Version="3.5.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.5.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>

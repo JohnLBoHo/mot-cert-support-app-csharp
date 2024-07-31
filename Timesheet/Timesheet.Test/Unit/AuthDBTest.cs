@@ -1,4 +1,5 @@
 ﻿namespace Timesheet.Test.Unit;
+using NUnit.Framework;
 using Timesheet.Models.Auth;
 using Timesheet.DB;
 using Microsoft.AspNetCore.Routing;
