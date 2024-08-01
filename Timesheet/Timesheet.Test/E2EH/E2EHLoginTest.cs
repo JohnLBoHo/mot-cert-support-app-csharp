@@ -13,7 +13,7 @@ public class E2EHLoginTest
     {
         new DriverManager().SetUpDriver(new ChromeConfig());
         ChromeOptions options = new ChromeOptions();
-        options.AddArguments("--headless");
+        options.AddArguments("--headless=new");
 
         IWebDriver _webDriver = new ChromeDriver(options);
 
