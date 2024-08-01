@@ -14,6 +14,7 @@ public class E2EHLoginTest
         new DriverManager().SetUpDriver(new ChromeConfig());
         ChromeOptions options = new ChromeOptions();
         options.AddArguments("--headless=new");
+        options.AddArguments("--whitelisted-ips=''");
 
         IWebDriver _webDriver = new ChromeDriver(options);
 
